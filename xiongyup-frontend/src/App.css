@@ -1,0 +1,433 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+  /*   ----- Variables  -----  */
+  :root {
+      --h1-footer-brown:#402C20;
+      --article-light-orange:#F9A87B;
+      --main-yellow:#E0D796;
+      --body-dark-green:#222601;
+      --h2-font-green:#324001;
+      --h2-background-color-orange:#A66C4B;
+      --nav-color-light-blue:#B8D1FA;
+      --color-cream:#F5DDAF;
+      --color-dark-blue:#63698D;
+      --color-light-brown: #5A4F3C;
+    }
+    
+    /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+    body {       /* Can alternatively define in html {}. */
+      background-image:url(/new_forest_background.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: var(--body-dark-green);
+  
+      font-family: "Inria Serif", serif;
+      font-weight: 400;
+  
+      margin:2%;
+      padding:2%;
+      max-width:auto;
+    }
+    
+    /*  ----- Page layout blocks -----  */
+    header{
+      background-color: var(--h1-footer-brown);
+      color: var(--article-light-orange);
+      margin: 0% 2%;
+      padding: 2%;
+    }
+  
+    main {
+      background-color: var(--main-yellow);
+      margin: 2%;
+      padding: 2%;
+    }
+  
+    /* section {} */
+  
+    article {
+      border-top: 2px solid var(--article-light-orange);
+      margin: 1%;
+      padding: 1%;
+    }
+    /* article img {}
+  
+      #topic1 {}
+      #topic2 {}
+    div {}
+    aside {} */
+  
+    footer {
+      background-color: var(--h1-footer-brown);
+      color: var(--article-light-orange);
+      margin: 0% 0% 2%;
+      padding: 2%;
+    }
+    
+    /* ----- Anchors ----- Text links */
+    a {
+      border: 2px solid var(--h2-font-green);
+      background-color: var(--nav-color-light-blue);
+      margin: 10px;
+      margin-left: 2%;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 16px;
+    }
+    /* 
+    a:link {}
+    a:hover {}
+    a:active {}
+    a:visited {} */
+    
+    /*  ----- Navigation ----- Override text links for navigation only.  */
+    nav {
+      color: var(--h2-font-green);
+      border-radius: 5px; 
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      line-height: 1;
+      margin: 2%;
+      padding: 0%;
+    }
+    nav a {
+      background-color: var(--nav-color-light-blue);
+      border: 2px solid var(--color-dark-blue);
+      border-radius: 5px; 
+      color: var(--h2-font-green);
+      text-decoration: none;
+      align-content: center;
+      margin: 3px;
+      padding: 5px;
+      border-spacing: 10%;
+    }
+    nav a:link {
+      color: var(--color-light-brown);
+      text-decoration:none;
+      margin: 3px;
+      padding: 10px;
+    }
+    
+    /*  -----  Typography  ----- */
+    /* 
+    
+    br {}
+    ol, ul, dl {}
+    li {}
+    dt {}
+    dd {} */
+    p {
+      line-height: 2;
+      margin-left: 2%;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Cinzel", serif;
+      font-optical-sizing: auto;
+      font-weight:700;
+    } 
+  
+    h1 {
+      color: var(--article-light-orange);
+      margin: 0;
+      padding: 2%;
+    }
+  
+    h2 {
+      background-color: var(--h2-background-color-orange);
+      color: var(--body-dark-green);
+      margin: 0% 0% 1%;
+      padding: 1%;
+    }
+  
+    h3 {
+      color: var(--color-dark-blue);
+    }
+    /* h4 {}
+    h5 {}
+    h6 {}
+    
+    abbr {}
+    acronym {}
+    address {}
+    blockquote {}
+      q {}
+      cite {}
+    em {}
+    hr {}
+    mark {}
+    s {}
+    span {}
+    strong {}
+    sub {}
+    sup {}
+    time {} */
+    
+    /*  ----- Coding or instructional typography ----- */
+    /* pre {}
+    code {}
+    kbd {}
+    samp {}
+    var {}
+    del {} 
+    ins {} */
+    
+    /*  ----- Table ----- */
+    table {
+      border: 2px solid var(--h2-font-green);
+      padding: 2%;
+      margin: 2%;
+      width: 100%;
+    }
+    caption {
+      border: 2px solid var(--h2-font-green);
+      padding: 2%;
+      margin-bottom: 1px;
+      font-size: 24px;
+    }
+    thead {
+      margin: 2%;
+      padding: 2%;
+    }
+    tbody {
+      margin: 2%;
+      padding: 2%;
+    }
+    tfoot {
+      margin: 2%;
+      padding: 2%;
+      
+    }
+    tr {
+      border-top: 0.5px solid var(--article-light-orange);
+      margin: 2%;
+      padding: 2%,2%,2% 2%;
+      align-items: center;
+    }
+      /* tr:nth-child(even) {} */
+    th {
+      border-top: 1px solid var(--h1-footer-brown);
+      text-align: left;
+      margin-right: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+    }
+    td {
+      border-top: 1px solid var(--h1-footer-brown);
+      margin: 2%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      align-content: left
+      ;
+    }
+      /* td:nth-child(1) {}
+    colgroup {}
+    data {}
+    datalist {} */
+    
+    
+    /*  ----- Form ----- */
+    form {
+      color: var(--body-dark-green);
+      border-top: 2px solid var(--article-light-orange);
+      margin: 0%;
+      padding: 0%;
+    }
+    
+    fieldset {
+      border: 2px solid var(--color-dark-blue);
+      margin: 5%;
+      padding: 3%;
+    }
+      legend {
+        color: var(--body-dark-green);
+        font-weight: bold;
+        margin: 0%;
+        padding: 0%;
+      }
+    label {
+      display: flex;
+      margin-top: 3%;
+  
+    }
+    button, input, select, textarea {
+      font-size: 100%;
+      padding: 0.5%;
+      font-family: inherit;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button {
+      border: 2px solid var(--h2-font-green);
+      margin: 2%;
+      padding: 2%;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 24px;
+    }
+    input {
+      border: 2px solid var(--h2-font-green);
+      margin: 1%;
+      padding: 1%;
+    }
+    input[type="text"]
+  
+    select {
+      border: 2px solid var(--h2-font-green);
+      margin-top: 2%;
+      padding: 2%;
+    }
+  
+      /* optgroup {}
+      option {}
+   */
+    textarea {
+      border: 2px solid var(--h2-font-green);
+      margin: 2%, 0, 0, 0;
+      width: 95%;
+      height: 200px;
+    }
+    /* output {}
+    meter {}
+    progress {} */
+    
+    
+    /* ----- Media ----- */
+    /* figure {}
+      figcaption {}
+      figure img {}
+    svg {}
+    picture {}
+      source {}
+    iframe {}
+    video {}
+    audio {}
+    embed {}
+    object {}
+     */
+    /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  
+  .gallery { 
+      display: flex;
+      flex-flow: row wrap;     /* Required for responsive layout. */
+      margin:0; 
+      padding:0;
+  }
+  
+  .gallery figure {            /* Modify all of these values to improve your design. */
+      width: 400px;  
+      background-color: var(--h2-background-color-orange);
+      border:2px var(--h1-footer-brown);
+      margin:1%; 
+      padding:1%;
+  }
+  
+  .gallery figcaption {
+      display:block;
+      color: var(--body-dark-green); 
+      padding: 2% 1% 2% 1%;     /* Modify to improve spacing. */
+  }
+  
+  .gallery img  {
+      width:100%;
+      margin:0;
+      padding:0;
+  }
+  
+  .gallery iframe {
+      width:100%;
+      height:200px;
+  }
+    
+    /* .floatright {}
+    .floatleft {}
+    .center-middle {}
+    
+    .ten {}
+    .twenty {}
+    .thirty {}
+    .forty {}
+    .fifty {}
+    .sixty {}
+    .seventy {}
+    .eighty {}
+    
+    .radius {}
+    .circle {}
+    .boxshadow {}
+    .tshadow {} 
+    .gradient {}
+    .shape {} */
+    
+    @keyframes App-logo {}
+    
+    /*   ===== TABLET  media query overrides mobile styles ===== */
+    @media all and (min-width: 600px) {}
+    
+    /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+    @media all and (min-width: 1080px) {}
+    
+    /*   ===== PRINT  media query overrides previous styles =====  */
+    @media print {}
+    
+
+
+
+
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
