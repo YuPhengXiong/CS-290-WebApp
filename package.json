@@ -1,0 +1,11 @@
+{
+  "homepage": "http://YuPhengXiong.github.io/CS-290-WebApp",
+
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
+}
